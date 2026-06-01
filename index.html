@@ -2,93 +2,74 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luka | Mentalista & Iluzionista</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LR | Mentalista & Iluzionista</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="topbar">
-  <a href="#top" class="logo">LUKA</a>
-  <button id="menuBtn" class="menu-btn">☰</button>
+<header class="header">
+<div class="logo">LR</div>
+<nav>
+<a href="#about">O meni</a>
+<a href="#formats">Nastupi</a>
+<a href="#reviews">Utisci</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Kontakt</a>
+</nav>
 </header>
 
-<div class="overlay" id="overlay">
-  <button id="closeBtn" class="close-btn">✕</button>
-  <a href="#top">Početna</a>
-  <a href="#formats">Vrste nastupa</a>
-  <a href="#about">O meni</a>
-  <a href="#reviews">Utisci</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Kontakt</a>
-  <hr>
-  <a href="#">Srpski</a>
-  <a href="#">English</a>
-</div>
-
-<section class="hero" id="top">
+<section class="hero">
+<div class="overlay"></div>
 <div class="hero-content">
 <h1>LUKA</h1>
 <h2>Mentalista & Iluzionista</h2>
-<p>Ekskluzivni nastupi za korporativne događaje, privatne proslave, hotele i restorane.</p>
-<a href="#contact" class="btn">ZAKAŽITE NASTUP</a>
-<div class="arrow">↓</div>
+<p>Ekskluzivni nastupi za događaje koji treba da ostanu zapamćeni.</p>
+<a class="btn" href="#contact">ZAKAŽITE NASTUP</a>
 </div>
 </section>
 
-<section class="eventbar">
-Korporativni događaji • Privatne proslave • Hoteli i restorani • Venčanja
-</section>
-
-<section class="section reveal">
+<section id="about" class="section">
 <h2>Neki trenuci ostaju tema razgovora dugo nakon što se događaj završi.</h2>
-<p>Iskustvo koje gosti pamte i prepričavaju.</p>
+<p>Close‑up magija, mentalizam i nastupi na pozornici za korporacije, hotele i privatne događaje.</p>
 </section>
 
-<section class="wide-image reveal"></section>
+<section class="banner"></section>
 
-<section class="section reveal" id="formats">
+<section id="formats" class="section">
 <h2>Pronađite format za vaš događaj</h2>
-<p>Različiti događaji zahtevaju različit pristup.</p>
 <div class="cards">
-<a class="card card1" href="closeup.html"><span>Close‑Up Magija</span></a>
-<a class="card card2" href="stage.html"><span>Magija na Pozornici</span></a>
+<a class="card c1" href="closeup.html"><span>Close‑Up Magija</span></a>
+<a class="card c2" href="stage.html"><span>Magija na Pozornici</span></a>
 </div>
 </section>
 
-<section class="section reveal" id="about">
-<h2>O meni</h2>
-<p>Moj cilj nije da pokažem trik. Moj cilj je da stvorim trenutke koje ljudi žele da prepričavaju.</p>
-</section>
-
-<section class="section reveal" id="reviews">
-<h2>Utisci gostiju</h2>
+<section id="reviews" class="section dark">
+<h2>Utisci</h2>
 <div class="reviews">
-<div>★★★★★<br>Fantastično iskustvo.</div>
+<div>★★★★★<br>Veče koje se pamti.</div>
 <div>★★★★★<br>Gosti su bili oduševljeni.</div>
-<div>★★★★★<br>Atmosfera za pamćenje.</div>
+<div>★★★★★<br>Sjajna atmosfera.</div>
 </div>
 </section>
 
-<section class="section reveal" id="faq">
+<section id="faq" class="section">
 <h2>Česta pitanja</h2>
-<p>Trajanje nastupa se prilagođava događaju.</p>
-<p>Nastupi širom Srbije i regiona.</p>
+<details><summary>Koliko traje nastup?</summary><p>Po dogovoru.</p></details>
+<details><summary>Da li putujete?</summary><p>Da, širom Srbije i regiona.</p></details>
 </section>
 
-<section class="section reveal" id="contact">
+<section id="contact" class="section dark">
 <h2>Kontakt</h2>
 <form>
 <input placeholder="Ime">
 <input placeholder="Email">
 <textarea placeholder="Poruka"></textarea>
-<button type="button">Pošalji upit</button>
+<button>Pošalji upit</button>
 </form>
 </section>
 
-<script src="script.js"></script>
+<footer>LR © 2026</footer>
 </body>
 </html>
