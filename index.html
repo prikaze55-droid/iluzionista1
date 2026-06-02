@@ -3,92 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Luka Rakočević</title>
+<title>Luka Rakočević | Mentalista & Iluzionista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+<div id="progressBar"></div>
 
 <header class="nav">
   <a href="#hero" class="logo">LR</a>
   <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
   <nav class="desktop">
+    <a href="#hero">Početna</a>
     <a href="#about">O meni</a>
     <a href="#formats">Nastupi</a>
     <a href="#reviews">Utisci</a>
-    <a href="#faq">FAQ</a>
     <a href="#contact">Kontakt</a>
   </nav>
 </header>
 
 <div class="mobile" id="mobileMenu">
-  <a href="#about">O meni</a>
-  <a href="#formats">Nastupi</a>
-  <a href="#reviews">Utisci</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Kontakt</a>
+<nav>
+<a href="#hero">Početna</a>
+<a href="#about">O meni</a>
+<a href="#formats">Nastupi</a>
+<a href="#reviews">Utisci</a>
+<a href="#contact">Kontakt</a>
+</nav>
 </div>
 
 <section id="hero" class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>LUKA RAKOČEVIĆ</h1>
-    <h2>Mentalista & Iluzionista</h2>
-    <p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p>
-    <a class="cta" href="#contact">ZAKAŽITE NASTUP</a>
-  </div>
+<div class="overlay"></div>
+<div class="hero-content reveal">
+<h1>LUKA <span>RAKOČEVIĆ</span></h1>
+<h2>MENTALISTA & ILUZIONISTA</h2>
+<p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p>
+<a class="cta" href="#contact">ZAKAŽITE NASTUP</a>
+</div>
 </section>
 
-<section id="about" class="reveal section">
-  <h3>Neki trenuci ostaju tema razgovora...</h3>
-  <p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram iskustva koja gosti pamte dugo nakon događaja.</p>
+<section id="about" class="section reveal">
+<h3>Ekskluzivno iskustvo za događaje koji moraju da se pamte.</h3>
+<p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram atmosferu koja ostaje dugo nakon poslednjeg aplauza.</p>
 </section>
 
-<section id="formats" class="reveal section">
-<h3>Pronađite format za vaš događaj</h3>
-
-<div class="format-card">
-<div class="image-placeholder">MESTO ZA CLOSE-UP FOTOGRAFIJU</div>
+<section id="formats" class="section">
+<div class="format-card reveal">
 <div class="text">
 <h4>Close‑Up Magija</h4>
-<p>Magija među gostima, za stolovima i u neposrednoj interakciji.</p>
+<p>Intimna magija među gostima, na dohvat ruke.</p>
 </div>
 </div>
-
-<div class="format-card">
-<div class="image-placeholder">MESTO ZA STAGE FOTOGRAFIJU</div>
+<div class="format-card reveal">
 <div class="text">
 <h4>Magija na Pozornici</h4>
-<p>Scenski nastup osmišljen da uključi i oduševi celu publiku.</p>
+<p>Velika iluzija za veliku publiku. Kreirana da ostavi utisak.</p>
 </div>
 </div>
 </section>
 
-<section id="reviews" class="reveal section">
-<h3>Utisci</h3>
+<section id="reviews" class="section reveal">
+<h3>Šta kažu drugi</h3>
 <div class="carousel">
 <div class="review active">★★★★★<br>Gosti su danima pričali o nastupu.</div>
-<div class="review">★★★★★<br>Savršena dopuna korporativnoj večeri.</div>
-<div class="review">★★★★★<br>Interaktivno, elegantno i potpuno drugačije.</div>
-</div>
-</section>
-
-<section id="faq" class="reveal section">
-<h3>Česta pitanja</h3>
-
-<div class="faq-item">
-<button class="faq-btn">Kakve nastupe nudiš?</button>
-<div class="faq-content">Prvenstveno radim close‑up magiju. Pored toga nudim i nastup na pozornici.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-btn">Koliko dugo traje nastup?</button>
-<div class="faq-content">Od 30 minuta za scenski nastup do više sati za close‑up format.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-btn">U kom gradu nastupate?</button>
-<div class="faq-content">Lociran sam u Beogradu ali nastupam širom Srbije i regiona.</div>
+<div class="review">★★★★★<br>Profesionalizam, harizma i magija u svakom koraku.</div>
+<div class="review">★★★★★<br>Potpuno je oduševio sve goste.</div>
 </div>
 </section>
 
@@ -100,7 +82,6 @@
 <a href="tel:+381616155594"><i class="fa-solid fa-phone"></i></a>
 </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
