@@ -1,26 +1,16 @@
-<!DOCTYPE html><html lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!DOCTYPE html><html lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Luka Rakočević</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css"></head><body>
-<div id="progressBar"></div>
-<header class="nav">
-<a href="#hero" class="logo"><img src="logo.png" alt="logo"></a>
-<nav class="desktop"><a href="#about">O meni</a><a href="#formats">Nastupi</a><a href="#reviews">Utisci</a><a href="#contact">Kontakt</a></nav>
-</header>
-<section id="hero" class="hero"><div class="overlay"></div><div class="hero-content"><h1>LUKA <span>RAKOČEVIĆ</span></h1><h2>MENTALISTA • ILUZIONISTA</h2><p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p><a class="cta" href="#contact">ZAKAŽITE NASTUP</a></div></section>
-<section id="about" class="section reveal"><h3>Ekskluzivno iskustvo za događaje koji moraju da se pamte.</h3><p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram atmosferu koja ostaje dugo nakon poslednjeg aplauza.</p></section>
+<div class="smoke-layer"></div><div class="cursor"></div><div id="progressBar"></div>
+<header class="nav"><a class="logo"><img src="logo.png"></a><nav class="desktop"><a href="#about">O MENI</a><a href="#formats">NASTUPI</a><a href="#reviews">UTISCI</a><a href="#contact">KONTAKT</a></nav></header>
+<section class="hero" id="hero"><div class="overlay"></div><div class="hero-content"><h1>LUKA <span>RAKOČEVIĆ</span></h1><h2>MENTALISTA • ILUZIONISTA</h2><a class="cta" href="#contact">ZAKAŽITE NASTUP</a></div></section>
+<section id="about" class="section reveal frame"><h3>EKSKLUZIVNO ISKUSTVO ZA DOGAĐAJE KOJI MORAJU DA SE PAMTE</h3><p>KROZ MENTALIZAM, ILUZIJU I DIREKTNU INTERAKCIJU SA PUBLIKOM STVARAM ATMOSFERU KOJA OSTAJE DUGO NAKON POSLEDNJEG APLAUZA.</p></section>
 <section id="formats" class="formats">
-<div class="format-card reveal"><div class="text"><h4>Close‑Up Magija</h4></div></div>
-<div class="format-card reveal"><div class="text"><h4>Magija na Pozornici</h4></div></div>
+<div class="flip-card reveal"><div class="flip-inner"><div class="front closeup"></div><div class="back">TEKST CLOSEUP</div></div></div>
+<div class="flip-card reveal"><div class="flip-inner"><div class="front stage"></div><div class="back">TEKST STAGE</div></div></div>
 </section>
-<section id="reviews" class="section reveal"><h3>Utisci</h3><div class="review">★★★★★ Gosti su danima pričali o nastupu.</div></section>
-<footer id="contact"><h3>ZAKAŽITE NASTUP</h3>
-<div class="socials">
-<a href="https://www.instagram.com/rakocevic147/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="#" id="mailBtn"><i class="fa-solid fa-envelope"></i></a>
-<a href="#" id="phoneBtn"><i class="fa-solid fa-phone"></i></a>
-</div>
-<div id="phoneBox">+381 61 615 5594</div>
-<div id="mailModal"><div class="modal"><input placeholder="Vaša email adresa"><textarea placeholder="Kako vam mogu pomoći?"></textarea><button>Zatvori</button></div></div>
-</footer><script src="script.js"></script></body></html>
+<section id="reviews" class="section reveal frame"><h3>UTISCI</h3><div class="review">★★★★★ Gosti su danima pričali o nastupu.</div></section>
+<footer id="contact" class="frame"><h3>ZAKAŽITE NASTUP</h3><div class="socials"><a target="_blank" href="https://www.instagram.com/rakocevic147/"><i class="fab fa-instagram"></i></a><a><i class="fa-solid fa-envelope"></i></a><a id="phoneBtn"><i class="fa-solid fa-phone"></i></a></div><div id="phoneBox">+381 61 615 5594</div></footer>
+<script src="script.js"></script></body></html>
