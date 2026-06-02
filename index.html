@@ -2,80 +2,105 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Luka Rakočević | Mentalista & Iluzionista</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Luka Rakočević</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-<header class="header">
-<div class="logo">LR</div>
-<button id="menuBtn" class="menu-btn">☰</button>
+
+<header class="nav">
+  <a href="#hero" class="logo">LR</a>
+  <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+  <nav class="desktop">
+    <a href="#about">O meni</a>
+    <a href="#formats">Nastupi</a>
+    <a href="#reviews">Utisci</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
 </header>
 
-<div id="menu" class="menu-overlay">
-<a href="#hero">Početna</a>
-<a href="#about">O meni</a>
-<a href="#formats">Vrste nastupa</a>
-<a href="#reviews">Utisci</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Kontakt</a>
+<div class="mobile" id="mobileMenu">
+  <a href="#about">O meni</a>
+  <a href="#formats">Nastupi</a>
+  <a href="#reviews">Utisci</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Kontakt</a>
 </div>
 
 <section id="hero" class="hero">
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<h1>LUKA RAKOČEVIĆ</h1>
-<h2>Mentalista & Iluzionista</h2>
-<p>Neki trenutci ostaju tema razgovora dugo nakon događaja.</p>
-<a href="#contact" class="cta">ZAKAŽITE NASTUP</a>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>LUKA RAKOČEVIĆ</h1>
+    <h2>Mentalista & Iluzionista</h2>
+    <p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p>
+    <a class="cta" href="#contact">ZAKAŽITE NASTUP</a>
+  </div>
+</section>
+
+<section id="about" class="reveal section">
+  <h3>Neki trenuci ostaju tema razgovora...</h3>
+  <p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram iskustva koja gosti pamte dugo nakon događaja.</p>
+</section>
+
+<section id="formats" class="reveal section">
+<h3>Pronađite format za vaš događaj</h3>
+
+<div class="format-card">
+<div class="image-placeholder">MESTO ZA CLOSE-UP FOTOGRAFIJU</div>
+<div class="text">
+<h4>Close‑Up Magija</h4>
+<p>Magija među gostima, za stolovima i u neposrednoj interakciji.</p>
+</div>
+</div>
+
+<div class="format-card">
+<div class="image-placeholder">MESTO ZA STAGE FOTOGRAFIJU</div>
+<div class="text">
+<h4>Magija na Pozornici</h4>
+<p>Scenski nastup osmišljen da uključi i oduševi celu publiku.</p>
+</div>
 </div>
 </section>
 
-<section id="about" class="section reveal">
-<h2>O meni</h2>
-<p>Kroz spoj mentalizma, iluzije i direktne interakcije sa publikom stvaram trenutke koje gosti dugo pamte i prepričavaju.</p>
-</section>
-
-<section id="formats" class="section reveal">
-<h2>Pronađite format za vaš događaj</h2>
-<div class="cards">
-<a href="closeup.html" class="card closeup">
-<div><h3>Close‑Up Magija</h3><p>Interaktivno iskustvo među gostima.</p></div>
-</a>
-<a href="stage.html" class="card stage">
-<div><h3>Magija na Pozornici</h3><p>Mističan nastup za celu publiku.</p></div>
-</a>
-</div>
-</section>
-
-<section id="reviews" class="section reveal dark">
-<h2>Utisci</h2>
-<div class="reviews">
-<div class="review">★★★★★<br>Gosti su danima pričali o nastupu.</div>
+<section id="reviews" class="reveal section">
+<h3>Utisci</h3>
+<div class="carousel">
+<div class="review active">★★★★★<br>Gosti su danima pričali o nastupu.</div>
 <div class="review">★★★★★<br>Savršena dopuna korporativnoj večeri.</div>
 <div class="review">★★★★★<br>Interaktivno, elegantno i potpuno drugačije.</div>
 </div>
 </section>
 
-<section id="faq" class="section reveal">
-<h2>Česta pitanja</h2>
-<details><summary>Kakve nastupe nudiš?</summary><p>Prvenstveno radim close-up magiju koja se dešava na korak od vaših gostiju. Pored toga nudim i nastup na pozornici koji je namenjen da oduševi sve goste.</p></details>
-<details><summary>Koliko dugo traje nastup?</summary><p>Trajanje nastupa se dogovara u skladu sa vašim potrebama i rasporedom. Raspon je od 30 minuta za nastup na sceni pa sve do nekoliko sati za interaktivnu close up magiju.</p></details>
-<details><summary>U kom gradu nastupate?</summary><p>Lociran sam u Beogradu ali nastupam širom Srbije i u regionu.</p></details>
+<section id="faq" class="reveal section">
+<h3>Česta pitanja</h3>
+
+<div class="faq-item">
+<button class="faq-btn">Kakve nastupe nudiš?</button>
+<div class="faq-content">Prvenstveno radim close‑up magiju. Pored toga nudim i nastup na pozornici.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-btn">Koliko dugo traje nastup?</button>
+<div class="faq-content">Od 30 minuta za scenski nastup do više sati za close‑up format.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-btn">U kom gradu nastupate?</button>
+<div class="faq-content">Lociran sam u Beogradu ali nastupam širom Srbije i regiona.</div>
+</div>
 </section>
 
-<section id="contact" class="section reveal dark">
-<h2>Kontakt</h2>
-<p><a href="mailto:rakocevicl147@gmail.com">rakocevicl147@gmail.com</a></p>
-<p><a href="tel:+381616155594">+381 61 615 5594</a></p>
-<p><a href="https://www.instagram.com/rakocevic147/" target="_blank">Instagram</a></p>
-<a href="mailto:rakocevicl147@gmail.com" class="cta">Pošalji upit</a>
-</section>
+<footer id="contact">
+<h3>ZAKAŽITE NASTUP</h3>
+<div class="socials">
+<a href="https://www.instagram.com/rakocevic147/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:rakocevicl147@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="tel:+381616155594"><i class="fa-solid fa-phone"></i></a>
+</div>
+</footer>
 
-<footer>LR © 2026</footer>
 <script src="script.js"></script>
 </body>
 </html>
