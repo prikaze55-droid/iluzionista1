@@ -1,19 +1,7 @@
 
-document.getElementById('burger')?.addEventListener('click',()=>{
-document.getElementById('mobileMenu')?.classList.toggle('show');
-});
-window.addEventListener('scroll',()=>{
-const h=document.documentElement;
-const sc=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
-const pb=document.getElementById('progressBar');
-if(pb) pb.style.width=sc+'%';
-document.querySelectorAll('.format-card').forEach((c,i)=>{
-c.style.transform=`translateY(${window.scrollY*0.03*(i+1)}px)`;
-});
-});
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting)e.target.classList.add('visible');
-});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+window.addEventListener('scroll',()=>{const h=document.documentElement;progressBar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%';document.querySelector('.hero').style.backgroundPositionY=(window.scrollY*0.15)+'px';});
+new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12}).observe(document.querySelector('#about'));
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12}).observe(el));
+mailBtn.onclick=(e)=>{e.preventDefault();mailModal.style.display='block';}
+document.querySelector('#mailModal button').onclick=()=>mailModal.style.display='none';
+phoneBtn.onclick=(e)=>{e.preventDefault();phoneBox.style.display=phoneBox.style.display==='block'?'none':'block';}

@@ -1,87 +1,26 @@
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Luka Rakočević | Mentalista & Iluzionista</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html><html lang="sr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Luka Rakočević</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
+<link rel="stylesheet" href="style.css"></head><body>
 <div id="progressBar"></div>
-
 <header class="nav">
-  <a href="#hero" class="logo">LR</a>
-  <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
-  <nav class="desktop">
-    <a href="#hero">Početna</a>
-    <a href="#about">O meni</a>
-    <a href="#formats">Nastupi</a>
-    <a href="#reviews">Utisci</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
+<a href="#hero" class="logo"><img src="logo.png" alt="logo"></a>
+<nav class="desktop"><a href="#about">O meni</a><a href="#formats">Nastupi</a><a href="#reviews">Utisci</a><a href="#contact">Kontakt</a></nav>
 </header>
-
-<div class="mobile" id="mobileMenu">
-<nav>
-<a href="#hero">Početna</a>
-<a href="#about">O meni</a>
-<a href="#formats">Nastupi</a>
-<a href="#reviews">Utisci</a>
-<a href="#contact">Kontakt</a>
-</nav>
-</div>
-
-<section id="hero" class="hero">
-<div class="overlay"></div>
-<div class="hero-content reveal">
-<h1>LUKA <span>RAKOČEVIĆ</span></h1>
-<h2>MENTALISTA & ILUZIONISTA</h2>
-<p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p>
-<a class="cta" href="#contact">ZAKAŽITE NASTUP</a>
-</div>
+<section id="hero" class="hero"><div class="overlay"></div><div class="hero-content"><h1>LUKA <span>RAKOČEVIĆ</span></h1><h2>MENTALISTA • ILUZIONISTA</h2><p>Neki trenuci ostaju tema razgovora dugo nakon događaja.</p><a class="cta" href="#contact">ZAKAŽITE NASTUP</a></div></section>
+<section id="about" class="section reveal"><h3>Ekskluzivno iskustvo za događaje koji moraju da se pamte.</h3><p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram atmosferu koja ostaje dugo nakon poslednjeg aplauza.</p></section>
+<section id="formats" class="formats">
+<div class="format-card reveal"><div class="text"><h4>Close‑Up Magija</h4></div></div>
+<div class="format-card reveal"><div class="text"><h4>Magija na Pozornici</h4></div></div>
 </section>
-
-<section id="about" class="section reveal">
-<h3>Ekskluzivno iskustvo za događaje koji moraju da se pamte.</h3>
-<p>Kroz mentalizam, iluziju i direktnu interakciju sa publikom stvaram atmosferu koja ostaje dugo nakon poslednjeg aplauza.</p>
-</section>
-
-<section id="formats" class="section">
-<div class="format-card reveal">
-<div class="text">
-<h4>Close‑Up Magija</h4>
-<p>Intimna magija među gostima, na dohvat ruke.</p>
-</div>
-</div>
-<div class="format-card reveal">
-<div class="text">
-<h4>Magija na Pozornici</h4>
-<p>Velika iluzija za veliku publiku. Kreirana da ostavi utisak.</p>
-</div>
-</div>
-</section>
-
-<section id="reviews" class="section reveal">
-<h3>Šta kažu drugi</h3>
-<div class="carousel">
-<div class="review active">★★★★★<br>Gosti su danima pričali o nastupu.</div>
-<div class="review">★★★★★<br>Profesionalizam, harizma i magija u svakom koraku.</div>
-<div class="review">★★★★★<br>Potpuno je oduševio sve goste.</div>
-</div>
-</section>
-
-<footer id="contact">
-<h3>ZAKAŽITE NASTUP</h3>
+<section id="reviews" class="section reveal"><h3>Utisci</h3><div class="review">★★★★★ Gosti su danima pričali o nastupu.</div></section>
+<footer id="contact"><h3>ZAKAŽITE NASTUP</h3>
 <div class="socials">
 <a href="https://www.instagram.com/rakocevic147/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:rakocevicl147@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-<a href="tel:+381616155594"><i class="fa-solid fa-phone"></i></a>
+<a href="#" id="mailBtn"><i class="fa-solid fa-envelope"></i></a>
+<a href="#" id="phoneBtn"><i class="fa-solid fa-phone"></i></a>
 </div>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+<div id="phoneBox">+381 61 615 5594</div>
+<div id="mailModal"><div class="modal"><input placeholder="Vaša email adresa"><textarea placeholder="Kako vam mogu pomoći?"></textarea><button>Zatvori</button></div></div>
+</footer><script src="script.js"></script></body></html>
