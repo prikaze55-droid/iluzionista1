@@ -2,74 +2,80 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LR | Mentalista & Iluzionista</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luka Rakočević | Mentalista & Iluzionista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="header">
 <div class="logo">LR</div>
-<nav>
+<button id="menuBtn" class="menu-btn">☰</button>
+</header>
+
+<div id="menu" class="menu-overlay">
+<a href="#hero">Početna</a>
 <a href="#about">O meni</a>
-<a href="#formats">Nastupi</a>
+<a href="#formats">Vrste nastupa</a>
 <a href="#reviews">Utisci</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Kontakt</a>
-</nav>
-</header>
+</div>
 
-<section class="hero">
-<div class="overlay"></div>
+<section id="hero" class="hero">
+<div class="hero-overlay"></div>
 <div class="hero-content">
-<h1>LUKA</h1>
+<h1>LUKA RAKOČEVIĆ</h1>
 <h2>Mentalista & Iluzionista</h2>
-<p>Ekskluzivni nastupi za događaje koji treba da ostanu zapamćeni.</p>
-<a class="btn" href="#contact">ZAKAŽITE NASTUP</a>
+<p>Neki trenutci ostaju tema razgovora dugo nakon događaja.</p>
+<a href="#contact" class="cta">ZAKAŽITE NASTUP</a>
 </div>
 </section>
 
-<section id="about" class="section">
-<h2>Neki trenuci ostaju tema razgovora dugo nakon što se događaj završi.</h2>
-<p>Close‑up magija, mentalizam i nastupi na pozornici za korporacije, hotele i privatne događaje.</p>
+<section id="about" class="section reveal">
+<h2>O meni</h2>
+<p>Kroz spoj mentalizma, iluzije i direktne interakcije sa publikom stvaram trenutke koje gosti dugo pamte i prepričavaju.</p>
 </section>
 
-<section class="banner"></section>
-
-<section id="formats" class="section">
+<section id="formats" class="section reveal">
 <h2>Pronađite format za vaš događaj</h2>
 <div class="cards">
-<a class="card c1" href="closeup.html"><span>Close‑Up Magija</span></a>
-<a class="card c2" href="stage.html"><span>Magija na Pozornici</span></a>
+<a href="closeup.html" class="card closeup">
+<div><h3>Close‑Up Magija</h3><p>Interaktivno iskustvo među gostima.</p></div>
+</a>
+<a href="stage.html" class="card stage">
+<div><h3>Magija na Pozornici</h3><p>Mističan nastup za celu publiku.</p></div>
+</a>
 </div>
 </section>
 
-<section id="reviews" class="section dark">
+<section id="reviews" class="section reveal dark">
 <h2>Utisci</h2>
 <div class="reviews">
-<div>★★★★★<br>Veče koje se pamti.</div>
-<div>★★★★★<br>Gosti su bili oduševljeni.</div>
-<div>★★★★★<br>Sjajna atmosfera.</div>
+<div class="review">★★★★★<br>Gosti su danima pričali o nastupu.</div>
+<div class="review">★★★★★<br>Savršena dopuna korporativnoj večeri.</div>
+<div class="review">★★★★★<br>Interaktivno, elegantno i potpuno drugačije.</div>
 </div>
 </section>
 
-<section id="faq" class="section">
+<section id="faq" class="section reveal">
 <h2>Česta pitanja</h2>
-<details><summary>Koliko traje nastup?</summary><p>Po dogovoru.</p></details>
-<details><summary>Da li putujete?</summary><p>Da, širom Srbije i regiona.</p></details>
+<details><summary>Kakve nastupe nudiš?</summary><p>Prvenstveno radim close-up magiju koja se dešava na korak od vaših gostiju. Pored toga nudim i nastup na pozornici koji je namenjen da oduševi sve goste.</p></details>
+<details><summary>Koliko dugo traje nastup?</summary><p>Trajanje nastupa se dogovara u skladu sa vašim potrebama i rasporedom. Raspon je od 30 minuta za nastup na sceni pa sve do nekoliko sati za interaktivnu close up magiju.</p></details>
+<details><summary>U kom gradu nastupate?</summary><p>Lociran sam u Beogradu ali nastupam širom Srbije i u regionu.</p></details>
 </section>
 
-<section id="contact" class="section dark">
+<section id="contact" class="section reveal dark">
 <h2>Kontakt</h2>
-<form>
-<input placeholder="Ime">
-<input placeholder="Email">
-<textarea placeholder="Poruka"></textarea>
-<button>Pošalji upit</button>
-</form>
+<p><a href="mailto:rakocevicl147@gmail.com">rakocevicl147@gmail.com</a></p>
+<p><a href="tel:+381616155594">+381 61 615 5594</a></p>
+<p><a href="https://www.instagram.com/rakocevic147/" target="_blank">Instagram</a></p>
+<a href="mailto:rakocevicl147@gmail.com" class="cta">Pošalji upit</a>
 </section>
 
 <footer>LR © 2026</footer>
+<script src="script.js"></script>
 </body>
 </html>
