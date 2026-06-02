@@ -10,3 +10,13 @@ const nav=document.querySelector('.nav');
 if(window.scrollY>60){nav.style.background='rgba(0,0,0,.75)';}
 else{nav.style.background='rgba(0,0,0,.15)';}
 });
+
+const mt=document.querySelector('.menu-toggle');
+const mo=document.querySelector('.menu-overlay');
+if(mt) mt.onclick=()=>mo.classList.toggle('open');
+document.querySelectorAll('.menu-overlay a').forEach(a=>a.onclick=()=>mo.classList.remove('open'));
+window.addEventListener('scroll',()=>{
+const n=document.querySelector('.nav');
+if(window.scrollY>20)n.classList.add('scrolled');else n.classList.remove('scrolled');
+});
+document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>q.parentElement.classList.toggle('open'));
