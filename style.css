@@ -1,6 +1,7 @@
 
 :root{--bronze:#c89a63}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#fff;font-family:'Cormorant Garamond',serif;overflow-x:hidden}
 .smoke-layer{position:fixed;inset:-10%;background:url(smoke.png) center/cover no-repeat;opacity:.22;z-index:-1;will-change:transform}
+.cursor{width:18px;height:18px;border:1px solid var(--bronze);border-radius:50%;position:fixed;pointer-events:none;z-index:99999}
 #progressBar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#c89a63,#fff)}
 .nav{position:fixed;top:0;width:100%;padding:24px 5%;display:flex;justify-content:space-between;backdrop-filter:blur(14px)}
 .logo img{height:72px}.desktop a{margin-left:32px;color:#fff;text-decoration:none}
@@ -27,3 +28,72 @@ footer{text-align:center;padding:180px 20px}#phoneBox{display:none;margin-top:20
 footer h3{font-size:2rem!important;border:1px solid rgba(200,154,99,.35);display:inline-block;padding:12px 30px}
 footer{padding:120px 20px 60px 20px!important}
 .desktop a:hover{color:#c89a63}
+
+
+/* V10 cinematic pass */
+.cursor{display:none!important;}
+body::before{
+content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;
+background:radial-gradient(circle at 50% 20%, rgba(200,154,99,.10), transparent 40%);
+}
+.nav{
+background:rgba(0,0,0,.15);
+transition:.4s ease;
+z-index:10000;
+}
+.nav:hover{background:rgba(0,0,0,.35);}
+.desktop a{position:relative;letter-spacing:2px}
+.desktop a:after{
+content:'';position:absolute;left:50%;bottom:-6px;width:0;height:1px;
+background:#c89a63;transition:.35s ease;transform:translateX(-50%);
+}
+.desktop a:hover:after{width:100%;}
+.smoke-layer{
+inset:-30%!important;
+width:160%!important;
+height:160%!important;
+opacity:.14!important;
+filter:blur(2px);
+}
+.hero{
+overflow:hidden;
+}
+.hero:before{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(circle,transparent 30%,rgba(0,0,0,.35) 100%);
+}
+.hero-content{animation:floatHero 8s ease-in-out infinite;}
+@keyframes floatHero{
+50%{transform:translateY(-8px);}
+}
+.frame{
+border:none!important;
+}
+.section{
+padding:280px 10%!important;
+}
+h3{
+text-shadow:0 0 25px rgba(200,154,99,.25);
+}
+.reveal{
+filter:blur(18px);
+}
+.visible{
+filter:blur(0);
+}
+.flip-card{
+transition:.45s ease;
+}
+.flip-card:hover{
+transform:scale(1.05);
+}
+.back{
+font-size:1.4rem!important;
+padding:40px;
+text-align:center;
+}
+footer{
+border-top:1px solid rgba(200,154,99,.18);
+}
