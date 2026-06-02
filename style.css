@@ -18,3 +18,13 @@
 .reveal{opacity:0;transform:translateY(140px);transition:2s cubic-bezier(.22,1,.36,1)}.visible{opacity:1;transform:none}
 footer{text-align:center;padding:180px 20px}#phoneBox{display:none;margin-top:20px}
 @media(max-width:900px){.formats{grid-template-columns:1fr}}
+
+.nav{z-index:10000;position:fixed!important}
+.desktop{display:flex!important;gap:28px;align-items:center}
+.logo{display:block!important}
+.smoke-layer{inset:-20%!important;height:160%!important;opacity:.28!important}
+.flip-card:hover{transform:scale(1.03)}
+.back{font-size:1.6rem!important;letter-spacing:2px}
+footer h3{font-size:2rem!important;border:1px solid rgba(200,154,99,.35);display:inline-block;padding:12px 30px}
+footer{padding:120px 20px 60px 20px!important}
+.desktop a:hover{color:#c89a63}
