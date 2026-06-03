@@ -34,3 +34,15 @@ const revealObserver=new IntersectionObserver(entries=>{
 },{threshold:0.18});
 
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+
+const track=document.querySelector('.gallery-track');
+document.getElementById('galPrev')?.addEventListener('click',()=>track.scrollBy({left:-600,behavior:'smooth'}));
+document.getElementById('galNext')?.addEventListener('click',()=>track.scrollBy({left:600,behavior:'smooth'}));
+
+const lb=document.getElementById('lightbox');
+const lbi=document.getElementById('lightboxImg');
+document.querySelectorAll('.gallery-track img').forEach(i=>{
+ i.addEventListener('click',()=>{lb.classList.add('open');lbi.src=i.src;});
+});
+lb?.addEventListener('click',()=>lb.classList.remove('open'));
