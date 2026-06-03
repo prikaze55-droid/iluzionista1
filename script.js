@@ -20,3 +20,17 @@ const n=document.querySelector('.nav');
 if(window.scrollY>20)n.classList.add('scrolled');else n.classList.remove('scrolled');
 });
 document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>q.parentElement.classList.toggle('open'));
+
+
+// repeatable reveal system
+const revealObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+   if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+   }else{
+      entry.target.classList.remove('visible');
+   }
+ });
+},{threshold:0.18});
+
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));

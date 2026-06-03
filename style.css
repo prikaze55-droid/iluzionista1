@@ -1,6 +1,6 @@
 
 :root{--bronze:#c89a63}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#fff;font-family:'Cormorant Garamond',serif;overflow-x:hidden}
-.smoke-layer{position:fixed;inset:-10%;background:url(smoke.jpg) center/cover no-repeat;opacity:.22;z-index:-1;will-change:transform}
+.smoke-layer{position:fixed;inset:-10%;background:url(smoke.png) center/cover no-repeat;opacity:.22;z-index:-1;will-change:transform}
 .cursor{width:18px;height:18px;border:1px solid var(--bronze);border-radius:50%;position:fixed;pointer-events:none;z-index:99999}
 #progressBar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#c89a63,#fff)}
 .nav{position:fixed;top:0;width:100%;padding:24px 5%;display:flex;justify-content:space-between;backdrop-filter:blur(14px)}
@@ -103,7 +103,7 @@ border-top:1px solid rgba(200,154,99,.18);
 .nav.scrolled .logo img{height:58px!important}
 .menu-toggle{background:none;border:0;color:#fff;cursor:pointer;letter-spacing:2px}
 .desktop{display:none!important}
-.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;opacity:0;pointer-events:none;transition:.5s;z-index:9999}
+.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.95);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;opacity:0;pointer-events:none;transition:.5s;z-index:9999}
 .menu-overlay.open{opacity:1;pointer-events:auto}
 .menu-overlay a{color:#fff;text-decoration:none;font-size:2rem}
 .faq-item{max-width:900px;margin:20px auto;border-bottom:1px solid rgba(200,154,99,.2);padding:20px}
@@ -111,3 +111,43 @@ border-top:1px solid rgba(200,154,99,.18);
 .faq-a{max-height:0;overflow:hidden;transition:.4s ease;opacity:.7}
 .faq-item.open .faq-a{max-height:120px;padding-top:15px}
 footer{margin-top:120px;padding-bottom:20px!important}
+
+
+/* Final Luxury Pass */
+.hero{min-height:140vh!important}
+.section{padding-top:220px!important;padding-bottom:220px!important}
+.reveal{
+opacity:0;
+transform:translateY(70px) scale(.97);
+filter:blur(14px);
+transition:all 1.4s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible{
+opacity:1;
+transform:translateY(0) scale(1);
+filter:blur(0);
+}
+.smoke-layer{
+opacity:.18!important;
+inset:-25%!important;
+width:150%!important;
+height:150%!important;
+}
+body::before{
+content:'';
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(circle at 50% 20%, rgba(200,154,99,.08), transparent 40%),
+radial-gradient(circle at 20% 70%, rgba(200,154,99,.05), transparent 35%);
+z-index:-1;
+}
+.flip-card:hover{
+transform:scale(1.06);
+filter:drop-shadow(0 0 25px rgba(200,154,99,.22));
+}
+footer{
+padding-top:140px!important;
+padding-bottom:50px!important;
+}
