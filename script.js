@@ -80,3 +80,38 @@ lb?.addEventListener('click',()=>lb.classList.remove('open'));
  });
 
 });
+
+
+/* stable gallery center emphasis */
+setTimeout(()=>{
+const track=document.querySelector('.gallery-track');
+if(!track) return;
+
+function markCenter(){
+ const imgs=[...track.querySelectorAll('img')];
+ const center=track.scrollLeft + track.clientWidth/2;
+ let best=null,d=999999;
+ imgs.forEach(img=>{
+   img.classList.remove('active-center');
+   const c=img.offsetLeft + img.clientWidth/2;
+   const diff=Math.abs(center-c);
+   if(diff<d){d=diff;best=img;}
+ });
+ if(best) best.classList.add('active-center');
+}
+
+markCenter();
+track.addEventListener('scroll',markCenter);
+
+document.getElementById('galNext')?.addEventListener('click',()=>{
+ if(track.scrollLeft + track.clientWidth >= track.scrollWidth-50){
+   track.scrollTo({left:0,behavior:'smooth'});
+ }
+});
+
+document.getElementById('galPrev')?.addEventListener('click',()=>{
+ if(track.scrollLeft<=20){
+   track.scrollTo({left:track.scrollWidth,behavior:'smooth'});
+ }
+});
+},200);
