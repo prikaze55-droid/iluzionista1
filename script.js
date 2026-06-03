@@ -34,3 +34,21 @@ const revealObserver=new IntersectionObserver(entries=>{
 },{threshold:0.18});
 
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+
+// Luxury pass parallax
+const hero=document.querySelector('.hero');
+window.addEventListener('scroll',()=>{
+ hero.style.backgroundPositionY=`${window.scrollY*0.01}px`;
+});
+
+// repeatable reveal
+document.querySelectorAll('.reveal').forEach(el=>{
+ const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+   if(e.isIntersecting) e.target.classList.add('visible');
+   else e.target.classList.remove('visible');
+  });
+ },{threshold:.18});
+ obs.observe(el);
+});

@@ -174,3 +174,13 @@ letter-spacing:4px!important;
 .hero-content .cta{
 margin-top:16px!important;
 }
+
+.hero-content{transform:translateY(-4vh)}
+.hero-content h1{font-size:clamp(3.2rem,7vw,5rem)!important;line-height:1;margin:0}
+.hero-content h2{margin-top:10px!important;letter-spacing:4px}
+.hero-content .cta{margin-top:16px!important}
+.hero-content{animation:floatHero 12s ease-in-out infinite!important}
+@keyframes floatHero{50%{transform:translateY(calc(-4vh - 4px));}}
+.formats-title{text-align:center;margin-bottom:60px}
+.card-label{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);letter-spacing:4px;font-size:.9rem;color:#fff;text-shadow:0 0 10px rgba(0,0,0,.8)}
+.front{position:relative}
