@@ -51,3 +51,12 @@ window.addEventListener('scroll',()=>{
    hero.style.transform='translateY('+(window.scrollY*0.015)+'px) scale(1.08)';
  }
 });
+
+
+// V21 single hero parallax
+const heroLayer=document.querySelector('.hero-image');
+window.addEventListener('scroll',()=>{
+ if(heroLayer){
+   heroLayer.style.transform='translateY('+(window.scrollY*0.02)+'px) scale(1.08)';
+ }
+});
