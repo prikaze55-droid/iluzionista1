@@ -184,3 +184,41 @@ margin-top:16px!important;
 .formats-title{text-align:center;margin-bottom:60px}
 .card-label{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);letter-spacing:4px;font-size:.9rem;color:#fff;text-shadow:0 0 10px rgba(0,0,0,.8)}
 .front{position:relative}
+
+/* V15 fixes */
+.hero{background:none!important;overflow:hidden}
+.hero-image{
+position:absolute;inset:0;
+background:url(hero.png) center center/cover no-repeat;
+z-index:0;
+will-change:transform;
+}
+.hero-content{
+position:relative;
+z-index:2;
+animation:heroFloat 12s ease-in-out infinite;
+}
+@keyframes heroFloat{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-4px)}
+}
+.formats{
+display:grid!important;
+grid-template-columns:1fr 1fr!important;
+align-items:start;
+}
+.formats-title{
+grid-column:1 / -1;
+text-align:center;
+margin-bottom:30px;
+}
+.card-label{
+position:absolute;
+left:50%;
+bottom:28px;
+transform:translateX(-50%);
+letter-spacing:4px;
+font-size:.9rem;
+color:#fff;
+}
+.front{position:relative}

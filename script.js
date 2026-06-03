@@ -52,3 +52,10 @@ document.querySelectorAll('.reveal').forEach(el=>{
  },{threshold:.18});
  obs.observe(el);
 });
+
+const heroImage=document.querySelector('.hero-image');
+window.addEventListener('scroll',()=>{
+ if(heroImage){
+   heroImage.style.transform=`translateY(${window.scrollY*0.008}px)`;
+ }
+});
