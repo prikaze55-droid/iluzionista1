@@ -59,3 +59,12 @@ window.addEventListener('scroll',()=>{
    heroImage.style.transform=`translateY(${window.scrollY*0.008}px)`;
  }
 });
+
+
+/* V16 cinematic parallax */
+const heroImgLayer=document.querySelector('.hero-image');
+window.addEventListener('scroll',()=>{
+  if(heroImgLayer){
+    heroImgLayer.style.transform='translateY('+(window.scrollY*0.003)+'px)';
+  }
+});
