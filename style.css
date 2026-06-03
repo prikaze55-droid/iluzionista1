@@ -1,6 +1,6 @@
 
 :root{--bronze:#c89a63}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#fff;font-family:'Cormorant Garamond',serif;overflow-x:hidden}
-.smoke-layer{position:fixed;inset:-10%;background:url(smoke.png) center/cover no-repeat;opacity:.22;z-index:-1;will-change:transform}
+.smoke-layer{position:fixed;inset:-10%;background:url(smoke.jpg) center/cover no-repeat;opacity:.22;z-index:-1;will-change:transform}
 .cursor{width:18px;height:18px;border:1px solid var(--bronze);border-radius:50%;position:fixed;pointer-events:none;z-index:99999}
 #progressBar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#c89a63,#fff)}
 .nav{position:fixed;top:0;width:100%;padding:24px 5%;display:flex;justify-content:space-between;backdrop-filter:blur(14px)}
