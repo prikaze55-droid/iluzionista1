@@ -46,3 +46,37 @@ document.querySelectorAll('.gallery-track img').forEach(i=>{
  i.addEventListener('click',()=>{lb.classList.add('open');lbi.src=i.src;});
 });
 lb?.addEventListener('click',()=>lb.classList.remove('open'));
+
+
+(function(){
+ const track=document.querySelector('.gallery-track');
+ if(!track) return;
+
+ const imgs=[...track.querySelectorAll('img')];
+ if(imgs.length){
+   imgs.forEach(i=>track.appendChild(i.cloneNode(true)));
+ }
+
+ function updateCenter(){
+   const items=[...track.querySelectorAll('img')];
+   const center=track.scrollLeft + track.clientWidth/2;
+   let best=null, dist=1e9;
+   items.forEach(img=>{
+      img.classList.remove('active-center');
+      const c=img.offsetLeft + img.clientWidth/2;
+      const d=Math.abs(center-c);
+      if(d<dist){dist=d; best=img;}
+   });
+   if(best) best.classList.add('active-center');
+ }
+ updateCenter();
+
+ track.addEventListener('scroll',()=>{
+   updateCenter();
+
+   if(track.scrollLeft >= track.scrollWidth/2){
+      track.scrollLeft = 1;
+   }
+ });
+
+});

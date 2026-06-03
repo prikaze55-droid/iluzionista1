@@ -296,3 +296,27 @@ transform:scale(1.06)!important;
 border-color:rgba(220,180,120,.7)!important;
 box-shadow:0 0 40px rgba(220,180,120,.22)!important;
 }
+
+
+/* Gallery final tuning */
+.gallery-arrow,.gallery-nav{
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+line-height:1!important;
+background:rgba(255,255,255,.02)!important;
+border:1px solid rgba(212,170,113,.22)!important;
+backdrop-filter:blur(3px)!important;
+}
+
+.gallery-track img{
+transition:transform .45s ease, opacity .45s ease, filter .45s ease!important;
+opacity:.82;
+filter:brightness(.82);
+}
+
+.gallery-track img.active-center{
+opacity:1!important;
+filter:brightness(1)!important;
+transform:scale(1.04)!important;
+}
