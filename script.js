@@ -34,3 +34,20 @@ if(c){
   c.style.top=e.clientY+'px';
  });
 }
+
+
+window.addEventListener('scroll',()=>{
+ const nav=document.querySelector('.nav');
+ if(nav){
+   if(window.scrollY>50) nav.classList.add('scrolled');
+   else nav.classList.remove('scrolled');
+ }
+});
+
+/* Strong cinematic parallax */
+window.addEventListener('scroll',()=>{
+ const hero=document.querySelector('.hero-image');
+ if(hero){
+   hero.style.transform='translateY('+(window.scrollY*0.015)+'px) scale(1.08)';
+ }
+});

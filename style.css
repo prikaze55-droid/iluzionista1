@@ -235,3 +235,65 @@ color:#fff;
 .formats-title{text-align:center;width:100%;margin:0 0 40px 0}
 .front{position:relative}
 .card-label{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);color:#fff;letter-spacing:4px}
+
+
+/* V19 luxury fixes */
+.nav{
+ background:transparent!important;
+ backdrop-filter:none!important;
+ transition:all .4s ease;
+ z-index:1000;
+}
+.nav.scrolled{
+ padding:12px 5%!important;
+}
+.nav.scrolled .logo img{height:54px!important;}
+.nav.scrolled .desktop a,
+.nav.scrolled .menu-toggle{font-size:.9rem;}
+
+.logo{cursor:pointer}
+
+.hero{
+ background:none!important;
+ overflow:hidden;
+}
+.hero-image{
+ position:absolute;
+ inset:0;
+ background:url('hero.png') center center/cover no-repeat;
+ z-index:0;
+ will-change:transform;
+}
+.overlay{z-index:1}
+.hero-content{z-index:2;position:relative}
+
+.smoke-layer::before{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:radial-gradient(circle at 50% 30%, rgba(200,154,99,.08), transparent 40%);
+ mix-blend-mode:screen;
+}
+.smoke-layer::after{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:
+ radial-gradient(circle at 20% 20%, rgba(255,215,160,.05), transparent 8%),
+ radial-gradient(circle at 70% 40%, rgba(255,215,160,.04), transparent 10%),
+ radial-gradient(circle at 80% 80%, rgba(255,215,160,.05), transparent 7%);
+}
+
+.gallery-track{
+ display:flex;
+ gap:24px;
+ overflow-x:auto;
+ scroll-behavior:smooth;
+}
+.gallery-track img{
+ width:33vw;
+ min-width:33vw;
+ border-radius:8px;
+ cursor:pointer;
+}
+footer{margin-top:180px;padding-bottom:20px}
