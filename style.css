@@ -1040,3 +1040,10 @@ footer h3,
         letter-spacing:.10em !important;
     }
 }
+
+
+/* V42: remove old pseudo-element title, keep only the real section heading */
+#formats::before{
+    content: none !important;
+    display: none !important;
+}
