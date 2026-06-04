@@ -1006,3 +1006,49 @@ pointer-events:none;
         justify-content:center!important;
     }
 }
+
+
+/* =========================================================
+   SECTION TITLES POLISH
+   - Make "ISTRAŽITE VRSTE NASTUPA" match other section-title sizing
+   - Change all section titles from white to ivory
+   ========================================================= */
+
+:root{
+    --section-title-ivory: #f4efe2;
+}
+
+h3,
+#gallery h3,
+#about h3,
+footer h3,
+.formats-title,
+#formats::before{
+    color: var(--section-title-ivory) !important;
+}
+
+#formats::before,
+.formats-title{
+    font-size: clamp(1.55rem, 3.4vw, 2.35rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: .10em !important;
+    text-shadow: 0 0 20px rgba(200,154,99,.10) !important;
+}
+
+@media (max-width: 900px){
+    #formats::before,
+    .formats-title{
+        font-size: clamp(1.55rem, 8vw, 2.35rem) !important;
+        line-height: 1.12 !important;
+        letter-spacing: .10em !important;
+        margin-bottom: 32px !important;
+        padding: 0 18px !important;
+    }
+
+    h3,
+    #gallery h3,
+    #about h3,
+    footer h3{
+        color: var(--section-title-ivory) !important;
+    }
+}
