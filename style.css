@@ -1008,47 +1008,35 @@ pointer-events:none;
 }
 
 
-/* =========================================================
-   SECTION TITLES POLISH
-   - Make "ISTRAŽITE VRSTE NASTUPA" match other section-title sizing
-   - Change all section titles from white to ivory
-   ========================================================= */
-
-:root{
-    --section-title-ivory: #f4efe2;
-}
+/* V41 titles fix */
+:root{--ivory-title:#f2ecdf;}
 
 h3,
-#gallery h3,
-#about h3,
+.formats-heading,
 footer h3,
-.formats-title,
-#formats::before{
-    color: var(--section-title-ivory) !important;
+#about h3,
+#gallery h3,
+#reviews h3,
+#faq h3{
+    color: var(--ivory-title) !important;
 }
 
-#formats::before,
-.formats-title{
-    font-size: clamp(1.55rem, 3.4vw, 2.35rem) !important;
-    line-height: 1.12 !important;
-    letter-spacing: .10em !important;
-    text-shadow: 0 0 20px rgba(200,154,99,.10) !important;
+.formats-heading{
+    grid-column:1 / -1;
+    text-align:center;
+    margin:0 0 56px 0 !important;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,4vw,4rem) !important;
+    letter-spacing:3px !important;
+    line-height:1.12 !important;
+    text-shadow:0 0 25px rgba(200,154,99,.25) !important;
 }
 
-@media (max-width: 900px){
-    #formats::before,
-    .formats-title{
-        font-size: clamp(1.55rem, 8vw, 2.35rem) !important;
-        line-height: 1.12 !important;
-        letter-spacing: .10em !important;
-        margin-bottom: 32px !important;
-        padding: 0 18px !important;
-    }
-
-    h3,
-    #gallery h3,
-    #about h3,
-    footer h3{
-        color: var(--section-title-ivory) !important;
+@media (max-width:900px){
+    .formats-heading{
+        font-size:clamp(1.55rem,8vw,2.35rem) !important;
+        margin:0 0 28px 0 !important;
+        padding:0 10px;
+        letter-spacing:.10em !important;
     }
 }
