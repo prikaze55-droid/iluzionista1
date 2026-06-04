@@ -394,3 +394,44 @@ z-index:99999;
 }
 .lightbox.open{display:flex;}
 .lightbox img{max-width:90vw;max-height:90vh;}
+
+
+.booking-form{
+max-width:700px;
+margin:40px auto;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.booking-form input,
+.booking-form textarea{
+width:100%;
+padding:16px 18px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,170,113,.20);
+border-radius:12px;
+color:white;
+font:inherit;
+}
+
+.booking-form textarea{
+min-height:180px;
+resize:vertical;
+}
+
+.booking-form button{
+align-self:center;
+padding:14px 34px;
+border-radius:999px;
+border:1px solid rgba(212,170,113,.35);
+background:rgba(212,170,113,.08);
+color:#d4aa71;
+cursor:pointer;
+transition:.3s;
+}
+
+.booking-form button:hover{
+transform:translateY(-2px);
+box-shadow:0 0 20px rgba(212,170,113,.2);
+}
