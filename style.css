@@ -451,51 +451,95 @@ pointer-events:none;
 #emailBox.show{display:block;opacity:1}
 
 
-.formats-title{
-width:100%;
-text-align:center;
-font-family:'Playfair Display',serif;
-font-size:clamp(1.2rem,2vw,1.8rem);
-letter-spacing:.28em;
-color:rgba(255,255,255,.85);
-margin-bottom:60px;
-text-transform:uppercase;
+/* SAFE FORMATS TITLE + CARD LABELS
+   Added without changing the existing HTML structure, so the card layout and images stay untouched. */
+
+#formats::before{
+    content:"ISTRAŽITE VRSTE NASTUPA";
+    grid-column:1 / -1;
+    display:block;
+    text-align:center;
+    margin:0 auto 56px;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.05rem,2vw,1.7rem);
+    letter-spacing:.30em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.86);
+    text-shadow:0 0 22px rgba(200,154,99,.16);
+}
+
+/* Keep existing card images intact, only reinforce image loading */
+.closeup{
+    background:url('closeup.png') center center / cover no-repeat !important;
+}
+.stage{
+    background:url('stage.png') center center / cover no-repeat !important;
 }
 
 .front{
-position:relative;
-overflow:hidden;
+    position:absolute !important;
+    inset:0 !important;
+    overflow:hidden;
 }
 
-.format-label{
-position:absolute;
-inset:0;
-display:flex;
-align-items:center;
-justify-content:center;
-font-family:'Playfair Display',serif;
-font-size:clamp(1.3rem,2.2vw,2.4rem);
-letter-spacing:.35em;
-text-transform:uppercase;
-color:rgba(255,255,255,.88);
-text-shadow:0 0 25px rgba(212,170,113,.18);
-transition:.35s ease;
-pointer-events:none;
+/* Subtle premium readability layer over the photo, not a replacement for the image */
+.front::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center, rgba(0,0,0,.08), rgba(0,0,0,.42));
+    opacity:.72;
+    transition:opacity .45s ease;
+    pointer-events:none;
 }
 
-.flip-card:hover .format-label{
-transform:scale(1.04);
-color:#ffffff;
+.closeup::after,
+.stage::after{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.15rem,2.2vw,2.35rem);
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.88);
+    text-shadow:0 0 28px rgba(200,154,99,.20), 0 2px 18px rgba(0,0,0,.75);
+    pointer-events:none;
+    transition:transform .45s ease, color .45s ease, text-shadow .45s ease;
 }
 
-@media (max-width:768px){
- .formats-title{
-   margin-bottom:36px;
-   letter-spacing:.18em;
-   font-size:1rem;
- }
- .format-label{
-   font-size:1.15rem;
-   letter-spacing:.22em;
- }
+.closeup::after{
+    content:"CLOSE-UP";
+}
+.stage::after{
+    content:"STAGE";
+}
+
+.flip-card:hover .front::before{
+    opacity:.50;
+}
+
+.flip-card:hover .closeup::after,
+.flip-card:hover .stage::after{
+    transform:scale(1.035);
+    color:#fff;
+    text-shadow:0 0 34px rgba(200,154,99,.34), 0 2px 18px rgba(0,0,0,.85);
+}
+
+@media(max-width:900px){
+    #formats::before{
+        margin-bottom:38px;
+        font-size:.95rem;
+        letter-spacing:.18em;
+        padding:0 20px;
+    }
+
+    .closeup::after,
+    .stage::after{
+        font-size:1.15rem;
+        letter-spacing:.22em;
+    }
 }
