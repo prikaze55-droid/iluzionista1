@@ -141,3 +141,9 @@ document.addEventListener('DOMContentLoaded',()=>{
    }
  });
 });
+
+document.addEventListener('DOMContentLoaded',function(){
+ const b=document.getElementById('emailBtn');
+ const e=document.getElementById('emailBox');
+ if(b&&e){b.addEventListener('click',()=>e.classList.toggle('show'));}
+});
