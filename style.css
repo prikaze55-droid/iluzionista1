@@ -454,19 +454,7 @@ pointer-events:none;
 /* SAFE FORMATS TITLE + CARD LABELS
    Added without changing the existing HTML structure, so the card layout and images stay untouched. */
 
-#formats::before{
-    content:"ISTRAŽITE VRSTE NASTUPA";
-    grid-column:1 / -1;
-    display:block;
-    text-align:center;
-    margin:0 auto 56px;
-    font-family:'Playfair Display',serif;
-    font-size:clamp(1.05rem,2vw,1.7rem);
-    letter-spacing:.30em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,.86);
-    text-shadow:0 0 22px rgba(200,154,99,.16);
-}
+
 
 /* Keep existing card images intact, only reinforce image loading */
 .closeup{
@@ -530,12 +518,7 @@ pointer-events:none;
 }
 
 @media(max-width:900px){
-    #formats::before{
-        margin-bottom:38px;
-        font-size:.95rem;
-        letter-spacing:.18em;
-        padding:0 20px;
-    }
+    
 
     .closeup::after,
     .stage::after{
@@ -672,12 +655,7 @@ pointer-events:none;
         padding:105px 7%!important;
     }
 
-    #formats::before{
-        margin-bottom:24px!important;
-        font-size:.92rem!important;
-        letter-spacing:.18em!important;
-        line-height:1.5!important;
-    }
+    
 
     .flip-card{
         height:58svh!important;
@@ -1042,8 +1020,18 @@ footer h3,
 }
 
 
-/* V42: remove old pseudo-element title, keep only the real section heading */
-#formats::before{
-    content: none !important;
+/* V43 definitive removal of duplicate pseudo-title */
+#formats::before,
+.formats::before{
+    content: "" !important;
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
 }
