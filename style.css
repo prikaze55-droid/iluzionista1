@@ -543,3 +543,371 @@ pointer-events:none;
         letter-spacing:.22em;
     }
 }
+
+
+/* =========================================================
+   MOBILE PREMIUM PASS
+   Desktop rules above stay untouched. Everything below applies
+   only to tablet/phone widths.
+   ========================================================= */
+
+@media (max-width: 900px){
+
+    html, body{
+        overflow-x:hidden;
+    }
+
+    .nav{
+        padding:18px 22px!important;
+        align-items:center!important;
+        background:transparent!important;
+        backdrop-filter:none!important;
+    }
+
+    .nav.scrolled{
+        padding:10px 20px!important;
+        background:transparent!important;
+    }
+
+    .logo img{
+        height:56px!important;
+    }
+
+    .nav.scrolled .logo img{
+        height:46px!important;
+    }
+
+    .menu-toggle{
+        font-size:.78rem!important;
+        letter-spacing:.18em!important;
+        padding:8px 0!important;
+    }
+
+    .menu-overlay{
+        gap:18px!important;
+        background:linear-gradient(
+            180deg,
+            rgba(0,0,0,.76) 0%,
+            rgba(0,0,0,.62) 52%,
+            rgba(0,0,0,.50) 100%
+        )!important;
+        backdrop-filter:blur(16px)!important;
+    }
+
+    .menu-overlay a{
+        font-size:1.45rem!important;
+        letter-spacing:.18em!important;
+    }
+
+    .hero{
+        min-height:100svh!important;
+        height:100svh!important;
+        background-position:center top!important;
+    }
+
+    .hero-content{
+        padding:0 22px!important;
+    }
+
+    .hero-content h1,
+    .hero h1{
+        font-size:clamp(2.95rem,15vw,4.55rem)!important;
+        line-height:.94!important;
+        letter-spacing:.035em!important;
+    }
+
+    .hero-content h2,
+    .hero h2{
+        font-size:.78rem!important;
+        letter-spacing:.28em!important;
+        margin-top:12px!important;
+        line-height:1.5!important;
+    }
+
+    .hero-content .cta,
+    .cta{
+        margin-top:18px!important;
+        padding:13px 24px!important;
+        font-size:.72rem!important;
+        letter-spacing:.22em!important;
+    }
+
+    .section{
+        padding:120px 7%!important;
+    }
+
+    .frame{
+        margin:48px auto!important;
+        max-width:92vw!important;
+    }
+
+    h3{
+        font-size:clamp(1.55rem,8vw,2.35rem)!important;
+        line-height:1.12!important;
+        letter-spacing:.10em!important;
+    }
+
+    p,
+    .review{
+        font-size:1.16rem!important;
+        line-height:1.55!important;
+    }
+
+    #about h3{
+        max-width:95%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #about p{
+        max-width:95%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .formats{
+        display:grid!important;
+        grid-template-columns:1fr!important;
+        gap:34px!important;
+        padding:105px 7%!important;
+    }
+
+    #formats::before{
+        margin-bottom:24px!important;
+        font-size:.92rem!important;
+        letter-spacing:.18em!important;
+        line-height:1.5!important;
+    }
+
+    .flip-card{
+        height:58svh!important;
+        min-height:420px!important;
+        max-height:560px!important;
+        width:100%!important;
+    }
+
+    .closeup::after,
+    .stage::after{
+        font-size:1.14rem!important;
+        letter-spacing:.22em!important;
+    }
+
+    .back{
+        font-size:1.1rem!important;
+        padding:28px!important;
+        line-height:1.5!important;
+    }
+
+    /* Mobile gallery: one dominant image, arrows floating over the sides */
+    #gallery.frame{
+        max-width:100%!important;
+        margin-left:0!important;
+        margin-right:0!important;
+        padding-left:0!important;
+        padding-right:0!important;
+    }
+
+    #gallery h3{
+        margin-bottom:42px!important;
+    }
+
+    .gallery-shell{
+        position:relative!important;
+        display:block!important;
+        width:100%!important;
+        padding:0!important;
+        overflow:hidden!important;
+    }
+
+    .gallery-track{
+        width:100%!important;
+        overflow-x:auto!important;
+        display:flex!important;
+        gap:18px!important;
+        padding:14px 9vw 22px!important;
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+    }
+
+    .gallery-track::-webkit-scrollbar{
+        display:none!important;
+    }
+
+    .gallery-track img{
+        width:82vw!important;
+        min-width:82vw!important;
+        height:58vw!important;
+        max-height:370px!important;
+        object-fit:cover!important;
+        border-radius:16px!important;
+        scroll-snap-align:center;
+        opacity:.92!important;
+        filter:brightness(.9)!important;
+        transform:none!important;
+    }
+
+    .gallery-track img.active-center{
+        opacity:1!important;
+        filter:brightness(1)!important;
+        transform:scale(1.015)!important;
+    }
+
+    .gallery-arrow{
+        position:absolute!important;
+        top:50%!important;
+        transform:translateY(-50%)!important;
+        z-index:20!important;
+        width:54px!important;
+        height:54px!important;
+        flex:0 0 54px!important;
+        display:flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+        line-height:0!important;
+        padding:0!important;
+        border-radius:50%!important;
+        background:rgba(255,255,255,.025)!important;
+        border:1px solid rgba(200,154,99,.22)!important;
+        color:#d2a46d!important;
+        font-size:34px!important;
+        box-shadow:0 0 18px rgba(200,154,99,.10)!important;
+        backdrop-filter:blur(4px)!important;
+    }
+
+    #galPrev{
+        left:12px!important;
+    }
+
+    #galNext{
+        right:12px!important;
+    }
+
+    .gallery-arrow:hover{
+        transform:translateY(-50%) scale(1.06)!important;
+        border-color:rgba(200,154,99,.42)!important;
+        color:#fff!important;
+        box-shadow:0 0 22px rgba(200,154,99,.20)!important;
+    }
+
+    .lightbox img{
+        max-width:92vw!important;
+        max-height:82vh!important;
+        border-radius:12px!important;
+    }
+
+    .faq-item{
+        max-width:92vw!important;
+        padding:18px 0!important;
+        margin:14px auto!important;
+    }
+
+    .faq-q{
+        font-size:1.05rem!important;
+        line-height:1.35!important;
+        letter-spacing:.06em!important;
+    }
+
+    .faq-a{
+        font-size:1rem!important;
+        line-height:1.55!important;
+    }
+
+    footer{
+        padding:130px 7% 28px!important;
+        margin-top:70px!important;
+    }
+
+    footer h3{
+        font-size:1.35rem!important;
+        padding:12px 24px!important;
+        letter-spacing:.14em!important;
+    }
+
+    .booking-form{
+        max-width:92vw!important;
+        margin:34px auto!important;
+        gap:14px!important;
+    }
+
+    .booking-form input,
+    .booking-form textarea{
+        padding:15px 16px!important;
+        border-radius:11px!important;
+        font-size:1rem!important;
+    }
+
+    .booking-form textarea{
+        min-height:190px!important;
+    }
+
+    .booking-form button{
+        width:100%!important;
+        max-width:260px!important;
+        padding:14px 26px!important;
+    }
+
+    .socials{
+        gap:28px!important;
+        padding:28px 0 12px!important;
+        flex-wrap:wrap!important;
+    }
+
+    .socials a{
+        font-size:1.75rem!important;
+    }
+
+    #emailBox,
+    #phoneBox{
+        font-size:1rem!important;
+        word-break:break-word;
+        margin-top:14px!important;
+    }
+
+    .smoke-layer{
+        opacity:.16!important;
+        filter:blur(1.5px)!important;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero-content h1,
+    .hero h1{
+        font-size:clamp(2.7rem,16vw,4rem)!important;
+    }
+
+    .hero-content h2,
+    .hero h2{
+        font-size:.72rem!important;
+        letter-spacing:.22em!important;
+    }
+
+    .section{
+        padding:105px 7%!important;
+    }
+
+    .flip-card{
+        height:56svh!important;
+        min-height:390px!important;
+    }
+
+    .gallery-track img{
+        width:84vw!important;
+        min-width:84vw!important;
+        height:62vw!important;
+    }
+
+    .gallery-arrow{
+        width:48px!important;
+        height:48px!important;
+        font-size:30px!important;
+    }
+
+    #galPrev{
+        left:8px!important;
+    }
+
+    #galNext{
+        right:8px!important;
+    }
+}
