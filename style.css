@@ -911,3 +911,98 @@ pointer-events:none;
         right:8px!important;
     }
 }
+
+
+/* =========================================================
+   MOBILE FINAL MICRO-TWEAKS
+   Small safe changes only: hero title, footer form spacing,
+   and gallery arrow optical centering.
+   ========================================================= */
+
+@media (max-width:900px){
+
+    .hero-content h1,
+    .hero h1{
+        font-size:clamp(2.78rem,14.2vw,4.25rem)!important;
+    }
+
+    footer h3{
+        margin-bottom:18px!important;
+    }
+
+    .booking-form{
+        margin-top:22px!important;
+    }
+
+    .gallery-arrow{
+        width:46px!important;
+        height:46px!important;
+        flex:0 0 46px!important;
+        padding:0!important;
+        display:flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+        font-size:40px!important;
+        line-height:1!important;
+        text-align:center!important;
+        font-family:Georgia, 'Times New Roman', serif!important;
+    }
+
+    #galPrev,
+    #galNext{
+        display:flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero-content h1,
+    .hero h1{
+        font-size:clamp(2.5rem,15vw,3.72rem)!important;
+    }
+
+    .gallery-arrow{
+        width:44px!important;
+        height:44px!important;
+        flex:0 0 44px!important;
+        font-size:38px!important;
+    }
+}
+
+
+/* =========================================================
+   GALLERY ARROWS – DESKTOP + MOBILE CONSISTENCY
+   Smaller circles, larger arrow symbols, true optical centering.
+   ========================================================= */
+
+.gallery-arrow,
+.gallery-nav{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    line-height:1!important;
+    padding:0!important;
+    font-family:Georgia, "Times New Roman", serif!important;
+    font-weight:400!important;
+}
+
+@media (min-width:901px){
+    .gallery-arrow,
+    .gallery-nav{
+        width:72px!important;
+        height:72px!important;
+        flex:0 0 72px!important;
+        font-size:52px!important;
+        border-radius:50%!important;
+    }
+
+    #galPrev,
+    #galNext{
+        display:flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+    }
+}
