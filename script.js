@@ -115,3 +115,29 @@ document.getElementById('galPrev')?.addEventListener('click',()=>{
  }
 });
 },200);
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+ const form=document.getElementById('bookingForm');
+ const status=document.getElementById('formStatus');
+ if(!form) return;
+
+ form.addEventListener('submit', async (e)=>{
+   e.preventDefault();
+   try{
+      const fd=new FormData(form);
+      await fetch(form.action,{
+        method:'POST',
+        body:fd,
+        headers:{'Accept':'application/json'}
+      });
+      form.reset();
+      if(status){
+        status.classList.add('show');
+        setTimeout(()=>status.classList.remove('show'),2000);
+      }
+   }catch(err){
+      console.log(err);
+   }
+ });
+});

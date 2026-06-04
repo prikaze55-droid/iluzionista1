@@ -435,3 +435,14 @@ transition:.3s;
 transform:translateY(-2px);
 box-shadow:0 0 20px rgba(212,170,113,.2);
 }
+
+.form-status{
+opacity:0;
+text-align:center;
+color:#d4aa71;
+margin:0 auto 18px;
+text-shadow:0 0 12px rgba(212,170,113,.35);
+transition:opacity .4s ease;
+pointer-events:none;
+}
+.form-status.show{opacity:1;}
