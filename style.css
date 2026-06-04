@@ -449,3 +449,53 @@ pointer-events:none;
 
 #emailBox{display:none;opacity:0;transition:.3s ease;margin-top:12px}
 #emailBox.show{display:block;opacity:1}
+
+
+.formats-title{
+width:100%;
+text-align:center;
+font-family:'Playfair Display',serif;
+font-size:clamp(1.2rem,2vw,1.8rem);
+letter-spacing:.28em;
+color:rgba(255,255,255,.85);
+margin-bottom:60px;
+text-transform:uppercase;
+}
+
+.front{
+position:relative;
+overflow:hidden;
+}
+
+.format-label{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Playfair Display',serif;
+font-size:clamp(1.3rem,2.2vw,2.4rem);
+letter-spacing:.35em;
+text-transform:uppercase;
+color:rgba(255,255,255,.88);
+text-shadow:0 0 25px rgba(212,170,113,.18);
+transition:.35s ease;
+pointer-events:none;
+}
+
+.flip-card:hover .format-label{
+transform:scale(1.04);
+color:#ffffff;
+}
+
+@media (max-width:768px){
+ .formats-title{
+   margin-bottom:36px;
+   letter-spacing:.18em;
+   font-size:1rem;
+ }
+ .format-label{
+   font-size:1.15rem;
+   letter-spacing:.22em;
+ }
+}
