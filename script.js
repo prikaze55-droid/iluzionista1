@@ -1,6 +1,25 @@
 
-const pb=document.getElementById('progressBar');const smoke=document.querySelector('.smoke-layer');
-window.addEventListener('scroll',()=>{const h=document.documentElement;pb.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%';smoke.style.transform=`translateY(${window.scrollY*0.04}px)`;document.querySelector('.hero').style.backgroundPositionY=`${window.scrollY*0.03}px`;});
+const pb=document.getElementById('progressBar');const smoke=document.querySelector('.smoke-layer');const hero=document.querySelector('.hero');
+function updateScrollEffects(){
+const h=document.documentElement;
+pb.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%';
+smoke.style.transform=`translateY(${window.scrollY*0.04}px)`;
+if(hero){
+ const heroScrollMax=Math.max(hero.offsetHeight-window.innerHeight,1);
+ const heroScroll=Math.min(Math.max(window.scrollY-hero.offsetTop,0),heroScrollMax);
+ const progress=heroScroll/heroScrollMax;
+ const copyProgress=Math.min(progress/.62,1);
+ const copyEase=1-Math.pow(1-copyProgress,3);
+ const bgProgress=Math.min(Math.max((progress-.58)/.42,0),1);
+ const bgEase=bgProgress*bgProgress*(3-2*bgProgress);
+ const copyTravel=window.innerWidth<=900?-window.innerHeight*.42:-window.innerHeight*.50;
+ hero.style.setProperty('--hero-copy-y',`${copyTravel*copyEase}px`);
+ hero.style.setProperty('--hero-bg-y',`${window.innerHeight*.16*bgEase}px`);
+}
+}
+window.addEventListener('scroll',updateScrollEffects,{passive:true});
+window.addEventListener('resize',updateScrollEffects);
+updateScrollEffects();
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('visible')),{threshold:.12}).observe(el));
 phoneBtn.onclick=()=>phoneBox.style.display=phoneBox.style.display==='block'?'none':'block';
 const c=document.querySelector('.cursor');window.addEventListener('mousemove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';});

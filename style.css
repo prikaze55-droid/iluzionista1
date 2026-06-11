@@ -1035,3 +1035,85 @@ footer h3,
     line-height: 0 !important;
     overflow: hidden !important;
 }
+
+
+/* Cinematic pinned hero scroll */
+:root{
+    --hero-pin-height:245vh;
+    --hero-copy-y:0px;
+    --hero-bg-y:0px;
+}
+
+.hero{
+    display:block!important;
+    height:var(--hero-pin-height)!important;
+    min-height:var(--hero-pin-height)!important;
+    position:relative!important;
+    overflow:visible!important;
+    background:none!important;
+    isolation:isolate;
+}
+
+.hero::before{
+    content:""!important;
+    position:sticky!important;
+    top:0;
+    display:block!important;
+    width:100%;
+    height:100vh;
+    background:
+        radial-gradient(circle, transparent 30%, rgba(0,0,0,.38) 100%),
+        url("hero.png") center calc(50% + var(--hero-bg-y)) / cover no-repeat;
+    z-index:0;
+    will-change:background-position;
+}
+
+.hero .overlay{
+    position:sticky!important;
+    top:0;
+    height:100vh;
+    width:100%;
+    margin-top:-100vh;
+    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.74))!important;
+    z-index:1;
+    pointer-events:none;
+}
+
+.hero-content{
+    position:sticky!important;
+    top:0;
+    height:100vh;
+    min-height:100vh;
+    margin-top:-100vh;
+    display:flex!important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    z-index:2;
+    animation:none!important;
+    transform:translate3d(0,calc(-4vh + var(--hero-copy-y)),0)!important;
+    will-change:transform;
+}
+
+@media (max-width:900px){
+    :root{
+        --hero-pin-height:215svh;
+    }
+
+    .hero::before,
+    .hero .overlay,
+    .hero-content{
+        height:100svh;
+        min-height:100svh;
+    }
+
+    .hero .overlay,
+    .hero-content{
+        margin-top:-100svh;
+    }
+
+    .hero-content{
+        transform:translate3d(0,calc(-2vh + var(--hero-copy-y)),0)!important;
+    }
+}
